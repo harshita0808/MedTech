@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - MedTech App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS styles for creativity */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .appointment-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cancel-appointment-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .cancel-appointment-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Appointments</h1>
+    </header>
+    <div class="container">
+        <h2>Upcoming Appointments</h2>
+        <div class="appointment-list">
+            <!-- List of user's appointments goes here -->
+            <div class="appointment-item" data-appointment-id="1">
+                <p><strong>Doctor:</strong> Dr. John Doe</p>
+                <p><strong>Date:</strong> July 15, 2023</p>
+                <button class="cancel-appointment-button">Cancel Appointment</button>
+            </div>
+            <div class="appointment-item" data-appointment-id="2">
+                <p><strong>Doctor:</strong> Dr. Jane Smith</p>
+                <p><strong>Date:</strong> August 5, 2023</p>
+                <button class="cancel-appointment-button">Cancel Appointment</button>
+            </div>
+            <!-- Add more appointment items as needed -->
+        </div>
+        
+        <!-- Booking Form -->
+        <h2>Book an Appointment</h2>
+        <form id="booking-form">
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor">
+                <option value="1">Dr. John Doe</option>
+                <option value="2">Dr. Jane Smith</option>
+                <!-- Add more doctor options here -->
+            </select>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            <button type="submit" class="book-appointment-button">Book Appointment</button>
+        </form>
+    </div>
+    
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2023 MedTech App. All rights reserved.</p>
+            <div class="social-buttons">
+                <!-- Include your social media links/buttons here if needed -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bookingForm = document.getElementById("booking-form");
+            const appointmentList = document.querySelector(".appointment-list");
+
+            // Function to handle form submission
+            function handleFormSubmit(event) {
+                event.preventDefault();
+
+                // Get user inputs
+                const doctorSelect = document.getElementById("doctor");
+                const selectedDoctor = doctorSelect.options[doctorSelect.selectedIndex].text;
+                const selectedDate = document.getElementById("date").value;
+
+                // Create an object to represent the appointment
+                const appointment = {
+                    doctor: selectedDoctor,
+                    date: selectedDate,
+                    id: new Date().getTime() // Generate a unique ID for the appointment
+                };
+
+                // Display the appointment in the "Upcoming Appointments" section
+                const appointmentItem = document.createElement("div");
+                appointmentItem.classList.add("appointment-item");
+                appointmentItem.setAttribute("data-appointment-id", appointment.id);
+                appointmentItem.innerHTML = `
+                    <p><strong>Doctor:</strong> ${appointment.doctor}</p>
+                    <p><strong>Date:</strong> ${appointment.date}</p>
+                    <button class="cancel-appointment-button">Cancel Appointment</button>
+                `;
+                appointmentList.appendChild(appointmentItem);
+
+                // Clear the form
+                bookingForm.reset();
+            }
+
+            // Function to handle appointment cancellation
+            function cancelAppointment(appointmentId) {
+                // Find the appointment by its ID and remove it from the list
+                const appointmentItem = document.querySelector(`[data-appointment-id="${appointmentId}"]`);
+                if (appointmentItem) {
+                    appointmentItem.remove();
+                }
+            }
+
+            // Add event listener for form submission
+            bookingForm.addEventListener("submit", handleFormSubmit);
+
+            // Add event listener for cancel buttons
+            appointmentList.addEventListener("click", function(event) {
+                if (event.target.classList.contains("cancel-appointment-button")) {
+                    const appointmentId = parseInt(event.target.closest(".appointment-item").getAttribute("data-appointment-id"));
+                    cancelAppointment(appointmentId);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

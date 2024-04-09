@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://th.bing.com/th?id=OIP.P0FB3OPFLC6rC3cIVsOBlAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007BFF, #00FFA3);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            background-color: #2ec4c9;
+            box-decoration-break: slice;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Hover Effects */
+        .container:hover {
+            transform: scale(1.02);
+            background-color: #3cbbe2;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <div class="container animated">
+        <p>Welcome to <span style="color: #007BFF;">MedTech</span>, your trusted platform for seamless doctor appointment booking in the picturesque state of Himachal Pradesh. Established in 2023, our journey began with a simple yet vital mission: to provide easy access to quality healthcare services for residents and visitors alike in the heart of the Himalayas. Our dedicated team is passionate about simplifying the healthcare experience and ensuring that every individual receives the care they deserve.</p>
+
+        <p>At <span style="color: #00FFA3;">MedTech</span>, we understand the importance of timely medical consultations. With a commitment to excellence and innovation, we have created a user-friendly platform that allows you to book appointments with leading doctors across Himachal Pradesh effortlessly. Our goal is to connect you with the best healthcare professionals, making it convenient to access medical expertise in your region.</p>
+        
+        <p>As we continue to grow and evolve, we remain dedicated to our mission of improving healthcare accessibility across Himachal Pradesh. Join us in this journey to prioritize your health and well-being. Together, we can make healthcare more accessible, convenient, and reliable for everyone in this beautiful region.</p>
+        
+        <p>In case of Emergency related issues, please download our android app to give an immediate healthcare service with shaking of the phone to alert the nearest hospital.</p>
+    </div>
+</body>
+</html>

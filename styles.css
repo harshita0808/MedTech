@@ -1,0 +1,226 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Gradient background */
+body {
+    background: linear-gradient(to bottom, #3498db, #1abc9c);
+}
+
+/* Basic styling for the header */
+header {
+    background-color: #34dba9;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.footer {
+    position: absolute;
+    bottom: 5;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #e976c5;
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Basic styling for the navigation menu */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styling for the main content */
+.container {
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Card-based doctor listings */
+.doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctor-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.book-button {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.book-button:hover {
+    background: #1abc9c;
+}
+
+/* Styling for the booking form */
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="date"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.booking-form button {
+    background: #1abc9c;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.social-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-button {
+    font-size: 24px; /* Adjust the icon size as needed */
+    color: #000000; /* Adjust the icon color */
+    text-decoration: hotpink;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-button:hover {
+    color: #ff2f86; /* Adjust the hover color */
+}
+/* Style for both login and signup forms */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #57dd79;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28904c;
+    color: #333;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #1abc9c;
+}
+
+/* Styling for login form */
+#login-form {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Styling for signup form */
+#signup-form {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Add additional styling as needed */
+
+/* Responsive design (adjust as needed) */
+@media (max-width: 768px) {
+    /* Mobile styles here */
+}

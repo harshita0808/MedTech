@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP PAGE</title>
+    <style>
+        body {
+            background-image: url('https://images.alphacoders.com/102/thumb-1920-1026347.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .registration-container {
+            background: rgba(164, 92, 92, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"], input[type="date"], input[type="tel"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #1df4c6;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            animation: neon-glow 1s infinite alternate;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+        }
+
+        @keyframes neon-glow {
+            from {
+                box-shadow: 0 0 10px rgba(227, 71, 251, 0.6);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(187, 58, 226, 0.6);
+            }
+        }
+
+        .footer-text {
+            color: #000000;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Create an Account</h1>
+        <form id="signup-form" action="patient_register.php" method="post">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            
+           
+            <select id="age" name="age" required>
+                <option name="age"  value="">Select your age range</option>
+                <option name="age"  value="Under 18">Under 18</option>
+                <option  name="age" value="18-24">18-24</option>
+                <option name="age"  value="25-34">25-34</option>
+                <option name="age"  value="35-44">35-44</option>
+                <option name="age"  value="45-54">45-54</option>
+                <option name="age"  value="55-64">55-64</option>
+                <option name="age"  value="65 and over">65 and over</option>
+            </select>
+            <input type="tel" id="phone" name="phone_number" placeholder="Phone Number" required>
+            <select id="gender" name="gender" required>
+                
+                <option name="gender" value="male">Male</option>
+                <option name="gender" value="female">Female</option>
+                <option name="gender" value="other">Other</option>
+            </select>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class="footer-text">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTech App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <li><a href="loginboth.html">Login</a></li>
+    <li><a href="registers.html">Sign Up</a></li>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--windows ka size change krne pr adjust the webpage-->
+</head>
+<body>
+    <header>
+        <h1>MedTech App</h1>
+        
+            <div id="google_translate_element"></div>
+        
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+       
+          
+    </header>
+    <nav>
+        <ul>
+            <li><a href="1.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="doctor-search" placeholder="Search for doctors">
+            <button id="search-button">Search</button>
+        </div>
+    
+    
+    </nav>
+    
+    <div class="container">
+        <h2>Available Doctors</h2>
+        <div class="doctor-list">
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. John Doe">
+                <h3>Dr. John Doe</h3>
+                <p>Cardiologist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <button class="book-button" data-doctor-id="1">Book Appointment</button>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. Jane Smith">
+                <h3>Dr. Jane Smith</h3>
+                <p>Dermatologist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <button class="book-button" data-doctor-id="2">Book Appointment</button>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. Michael Johnson">
+                <h3>Dr. Michael Johnson</h3>
+                <p>Orthopedic Surgeon</p>
+                <p>Availability: Monday, Wednesday</p>
+                <button class="book-button" data-doctor-id="3">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. John Doe">
+                <h3>Dr. ASD</h3>
+                <p>Cardiologist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <button class="book-button" data-doctor-id="1">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. John Doe">
+                <h3>Dr. TGH</h3>
+                <p>Cardiologist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <button class="book-button" data-doctor-id="1">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. John Doe">
+                <h3>Dr. YHYB</h3>
+                <p>Cardiologist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <button class="book-button" data-doctor-id="1">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <img src="https://i.pinimg.com/originals/fa/23/01/fa230113c98777d76a4b7dffd216526d.jpg" alt="Dr. John Doe">
+                <h3>Dr. JYJYGV</h3>
+                <p>Cardiologist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <button class="book-button" data-doctor-id="1">Book Appointment</button>
+            </div>
+            <!-- Add more doctor cards as needed -->
+        </div>
+        <h2>Book an Appointment</h2>
+        <div class="booking-form">
+            <form>
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor">
+                    <option value="1">Dr. John Doe</option>
+                    <option value="2">Dr. Jane Smith</option>
+                    <option value="3">Dr. Michael Johnson</option>
+                    <option value="4">Dr. Michael Johnson</option>
+                    <option value="5">Dr. Michael Johnson</option>
+                    <option value="6">Dr. Michael Johnson</option>
+                    <!-- Add more doctor options here -->
+                </select>
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date">
+                <button type="submit" class="book-button">Book</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2023 MedTech App. All rights reserved.</p>
+            <div class="social-buttons">
+                <a href="#" class="social-button"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-button"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-button"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+       
+    </footer>
+
+</body>
+</html>

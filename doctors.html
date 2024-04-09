@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - MedTech Hospital</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file link here -->
+    <style>
+        .doctor-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doctor-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ea1386, transparent);
+            transition: left 0.4s;
+            z-index: -1;
+        }
+
+        .doctor-card:hover::before {
+            left: 100%;
+        }
+
+        /* Additional Styles */
+        /* Add your additional styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5716b2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #eae313, #ea1386, #eeee0b);
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            background-color: #470fb8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 20px;
+        }
+
+        .doctor-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .doctor-card {
+            background-color: #23ebe8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .doctor-card:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Doctors at MedTech Hospital</h1>
+    </header>
+    <div class="container">
+        <h2>List of Doctors</h2>
+        <div class="doctor-list">
+            <!-- Doctor 1 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. John Doe">
+                <h3>Dr. John Doe</h3>
+                <p>Specialty: Cardiologist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <p>Treatment Time: 9:00 AM - 12:00 PM</p>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. Jane Smith">
+                <h3>Dr. Jane Smith</h3>
+                <p>Specialty: Dermatologist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <p>Treatment Time: 10:00 AM - 1:00 PM</p>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. Michael Johnson">
+                <h3>Dr. Michael Johnson</h3>
+                <p>Specialty: Orthopedic Surgeon</p>
+                <p>Availability: Monday, Wednesday</p>
+                <p>Treatment Time: 8:00 AM - 11:00 AM</p>
+            </div>
+
+            <!-- Doctor 4 -->
+            <div class="doctor-card">
+                <img src="https://leman-clinic.ch/wp-content/uploads/2018/11/02.jpg" alt="Dr. Sarah Lee">
+                <h3>Dr. Sarah Lee</h3>
+                <p>Specialty: Pediatrician</p>
+                <p>Availability: Tuesday, Friday</p>
+                <p>Treatment Time: 9:30 AM - 12:30 PM</p>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="doctor-card">
+                <img src="https://leman-clinic.ch/wp-content/uploads/2018/11/02.jpg" alt="Dr. Emily Adams">
+                <h3>Dr. Emily Adams</h3>
+                <p>Specialty: Gynecologist</p>
+                <p>Availability: Monday, Wednesday, Thursday</p>
+                <p>Treatment Time: 10:00 AM - 1:00 PM</p>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. David Wilson">
+                <h3>Dr. David Wilson</h3>
+                <p>Specialty: Neurologist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <p>Treatment Time: 8:30 AM - 11:30 AM</p>
+            </div>
+
+            <!-- Doctor 7 -->
+            <div class="doctor-card">
+                <img src="https://leman-clinic.ch/wp-content/uploads/2018/11/02.jpg" alt="Dr. Elizabeth Brown">
+                <h3>Dr. Elizabeth Brown</h3>
+                <p>Specialty: Ophthalmologist</p>
+                <p>Availability: Monday, Wednesday</p>
+                <p>Treatment Time: 9:00 AM - 12:00 PM</p>
+            </div>
+
+            <!-- Doctor 8 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. Robert White">
+                <h3>Dr. Robert White</h3>
+                <p>Specialty: Dentist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <p>Treatment Time: 10:30 AM - 1:30 PM</p>
+            </div>
+
+            <!-- Doctor 9 -->
+            <div class="doctor-card">
+                <img src="https://leman-clinic.ch/wp-content/uploads/2018/11/02.jpg" alt="Dr. Linda Green">
+                <h3>Dr. Linda Green</h3>
+                <p>Specialty: Psychiatrist</p>
+                <p>Availability: Monday, Wednesday, Friday</p>
+                <p>Treatment Time: 9:30 AM - 12:30 PM</p>
+            </div>
+
+            <!-- Doctor 10 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. William Turner">
+                <h3>Dr. William Turner</h3>
+                <p>Specialty: Urologist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <p>Treatment Time: 8:00 AM - 11:00 AM</p>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. Jane Smith">
+                <h3>Dr. WERT</h3>
+                <p>Specialty: Dermatologist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <p>Treatment Time: 10:00 AM - 1:00 PM</p>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card">
+                <img src="https://th.bing.com/th/id/OIP.d_X6BOe12DEsoiTVaceuRQHaDt?pid=ImgDet&rs=1" alt="Dr. Jane Smith">
+                <h3>Dr. SHUK</h3>
+                <p>Specialty: Dermatologist</p>
+                <p>Availability: Tuesday, Thursday</p>
+                <p>Treatment Time: 10:00 AM - 1:00 PM</p>
+            </div>
+
+            <!-- Add more doctor cards as needed -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2023 MedTech Hospital. All rights reserved.</p>
+            <div class="social-buttons">
+                <!-- Include your social media links/buttons here if needed -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
